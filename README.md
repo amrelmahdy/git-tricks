@@ -28,9 +28,11 @@ Using the git log above we want to remove the following commits; 2 & 3 (ae45fab 
 
 git rebase --onto <branch name>~<first commit number to remove> <branch name>~<first commit to be kept> <branch name>
 
-e.g to remove commits 2 & 3 above
+### Example to remove commits 2 & 3 above
 
+```
 git rebase --onto repair~3 repair~1 repair
+```
 
 ## Using Cherry Pick
 Step 1: Find the commit before the commit you want to remove git log
