@@ -55,6 +55,7 @@ You can do the process without creating a new branch by replacing Step 2 & 3 wit
 Example
 Say we want to remove commits 2 & 4 from the repo.
 
+```
 git checkout b3d92c5 Checkout the last usable commit.
 git checkout -b repair Create a new branch to work on.
 git cherry-pick 77b9b82 Run through commit 3.
@@ -63,5 +64,7 @@ git checkout master Checkout master.
 git reset --hard b3d92c5 Reset master to last usable commit.
 git merge repair Merge our new branch onto master.
 git push --hard origin master Push master to the remote repo.
-Final note
+```
+
+## Final note
 Git rebase & cherrypick are dangerous but powerful solutions that should only be used as a last option and only be undertaken by someone who knows what they are doing.  Beware that both solutions could have adverse effects on other users who are working on the same repository / branch.
